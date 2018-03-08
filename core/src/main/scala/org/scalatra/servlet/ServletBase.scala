@@ -11,6 +11,7 @@ import scala.collection.immutable.DefaultMap
 /**
  * ServletBase implements the Scalatra DSL with the Servlet API, and can be
  * a base trait of a Servlet or a Filter.
+ //ScalatraBase  也with了一个Initializable
  */
 trait ServletBase
     extends ScalatraBase

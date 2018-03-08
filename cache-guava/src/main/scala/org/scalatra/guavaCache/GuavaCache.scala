@@ -7,7 +7,7 @@ import org.joda.time.DateTime
 import org.scalatra.cache.Cache
 
 import scala.concurrent.duration.Duration
-
+//http://www.cnblogs.com/peida/p/Guava_Cache.html
 object GuavaCache extends Cache {
   private[this] val cache = CacheBuilder.newBuilder()
     .maximumSize(10000L)

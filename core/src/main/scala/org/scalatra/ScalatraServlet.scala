@@ -41,7 +41,7 @@ object ScalatraServlet {
 }
 
 /**
- * An implementation of the Scalatra DSL in a servlet.  This is the recommended
+  * An implementation of the Scalatra DSL(领域特定语言（domain-specific languages，简称DSL) in a servlet.  This is the recommended
  * base trait for most Scalatra applications.  Use a servlet if:
  *
  * $ - your Scalatra routes run in a subcontext of your web application.
@@ -52,6 +52,8 @@ object ScalatraServlet {
  *
  * @see ScalatraFilter
  */
+ //ServletBase 也with了一个Initializable
+//
 trait ScalatraServlet
     extends HttpServlet
     with ServletBase
@@ -116,7 +118,7 @@ trait ScalatraServlet
         routes.entryPoints.mkString("<ul><li>", "</li><li>", "</li></ul>"))
     }
   }
-
+  //trait ScalatraBase中 定义为 _
   type ConfigT = ServletConfig
 
   override def init(config: ServletConfig): Unit = {
@@ -125,7 +127,7 @@ trait ScalatraServlet
   }
 
   override def initialize(config: ServletConfig): Unit = {
-    super.initialize(config)
+    super.initialize(config) //调用了ScalatraBase的 initialize方法
   }
 
   override def destroy(): Unit = {

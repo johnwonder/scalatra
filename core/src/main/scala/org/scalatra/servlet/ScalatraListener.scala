@@ -18,6 +18,7 @@ class ScalatraListener extends ServletContextListener {
 
   override def contextInitialized(sce: ServletContextEvent): Unit = {
     try {
+        //赋值给serveletContext
       configureServletContext(sce)
       configureCycleClass(Thread.currentThread.getContextClassLoader)
     } catch {

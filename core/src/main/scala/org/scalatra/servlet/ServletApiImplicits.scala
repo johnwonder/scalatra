@@ -14,7 +14,8 @@ trait ServletApiImplicits {
 
   implicit def enrichSession(session: HttpSession): RichSession =
     RichSession(session)
-
+ // 用来调用mount
+  //http://johnwonder.github.io/2017/03/25/scala-implicit1/
   implicit def enrichServletContext(servletContext: ServletContext): RichServletContext =
     RichServletContext(servletContext)
 

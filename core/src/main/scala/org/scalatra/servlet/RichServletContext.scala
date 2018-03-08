@@ -10,6 +10,7 @@ import scala.collection.mutable
 
 /**
  * Extension methods to the standard ServletContext.
+   * http://johnwonder.github.io/2017/03/25/scala-implicit1/
  */
 case class RichServletContext(sc: ServletContext) extends AttributesMap {
 

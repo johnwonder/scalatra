@@ -6,6 +6,7 @@ import javax.servlet.ServletContext
  * Trait representing an object that can't be fully initialized by its
  * constructor.  Useful for unifying the initialization process of an
  * HttpServlet and a Filter.
+ GenericServlet是个抽象类 实现了Servlet的接口 init
  */
 trait Initializable {
   type ConfigT

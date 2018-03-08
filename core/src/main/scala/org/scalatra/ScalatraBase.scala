@@ -21,10 +21,10 @@ object ScalatraBase {
   import org.scalatra.servlet.ServletApiImplicits._
   import scala.collection.JavaConverters._
 
-  /**
+    /**
    * A key for request attribute that contains any exception
    * that might have occured before the handling has been
-   * propagated to ScalatraBase#handle (such as in
+   * propagated(传播) to ScalatraBase#handle (such as in
    * FileUploadSupport)
    */
   val PrehandleExceptionKey: String = "org.scalatra.PrehandleException"
@@ -618,6 +618,7 @@ trait ScalatraBase
       case "" => "/" // The root servlet is "", but the root cookie path is "/"
       case p => p
     }
+        //调的map的方法  实现的是mutable Map
     servletContext(CookieSupport.CookieOptionsKey) = CookieOptions(path = path)
   }
 

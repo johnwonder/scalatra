@@ -4,6 +4,9 @@ package object servlet {
   /**
    * Structural type for the various Servlet API objects that have attributes.
    * These include ServletContext, HttpSession, and ServletRequest.
+    /* 结构类型
+  http://hongjiang.info/scala-type-system-structural-type/
+   */
    */
   private[scalatra]type Attributes = {
     def getAttribute(name: String): AnyRef

@@ -88,6 +88,7 @@ trait AttributesMap extends Map[String, Any] with MutableMapWithIndifferentAcces
    * @return the map itself
    */
   def +=(kv: (String, Any)): AttributesMap.this.type = {
+      //增加属性的时候会调用此方法
     attributes.setAttribute(kv._1, kv._2.asInstanceOf[AnyRef])
     this
   }

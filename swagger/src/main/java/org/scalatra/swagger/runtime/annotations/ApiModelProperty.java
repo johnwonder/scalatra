@@ -6,6 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /** ApiProperty can be put on a Method to allow swagger to understand the json fields datatype and more. */
+///* 用在方法上  允许swagger 理解json field 数据类型*/
 @Target({ElementType.METHOD, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ApiModelProperty {

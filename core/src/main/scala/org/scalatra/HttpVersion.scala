@@ -9,7 +9,7 @@ abstract class HttpVersion(
   val text: String = protocolName + '/' + majorVersion + '.' + minorVersion
 
   override def toString: String = text
-
+  //http://docs.scala-lang.org/tutorials/FAQ/finding-symbols.html
   override def hashCode(): Int = protocolName.## * 31 + majorVersion.## * 31 + minorVersion
 
   override def equals(obj: Any): Boolean = obj match {

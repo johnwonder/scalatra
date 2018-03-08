@@ -59,6 +59,7 @@ case class RichRequest(r: HttpServletRequest) extends AttributesMap {
    * "location" of the request's target within the application. This may be
    * an empty string, if the request URL targets the application root and
    * does not have a trailing slash.
+   * 反斜杠;拖尾斜杠;尾斜杠
    */
   def pathInfo: String = Option(r.getPathInfo) getOrElse ""
 
